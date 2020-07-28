@@ -1,23 +1,26 @@
-# activate-im-api
+##
 
+- Pull and install dependencies
 
-## Docker
-
-To run the api with Docker
-
-
-- Build and tag the image  
   ```sh
-  docker build -t activate-im:latest .
+  npm install .
   ```
 
-- Run the image in a container, passing the ENV variables  
-  ```sh
-  docker run -p <HOST_PORT>:<CONTAINER_PORT> --env-file=.env activate-im:latest
-  ```
-  It will listen at `http://localhost:<HOST_PORT>`
+* Start the server
 
-- Stop the container  
   ```sh
-  docker container stop <CONTAINER_NAME>
+  npm start
+  ```
+
+  It will listen at `http://localhost:8000`
+
+* you can run and see the documentation
+
+  ```sh
+  http://localhost:8000/documentation
+  ```
+
+* Run test
+  ```sh
+  npm run test
   ```
