@@ -1,0 +1,48 @@
+{
+  "name": "assignment",
+  "version": "1.0.0",
+  "description": "assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=testing jest",
+    "test:watch": "NODE_ENV=testing jest --watch",
+    "test:coverage": "NODE_ENV=testing jest --coverage",
+    "start:prod": "NODE_ENV=production ./node_modules/nodemon/bin/nodemon.js index.js",
+    "start": "NODE_ENV=development ./node_modules/nodemon/bin/nodemon.js index.js",
+    "check": "npm run format && npm run lint",
+    "format": "prettier --write \"**/*.+(js|yml|yaml|json)\"",
+    "lint": "eslint ."
+  },
+  "author": "Neeraj kaushik",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/boom": "^9.0.0",
+    "@hapi/hapi": "^19.1.1",
+    "@hapi/inert": "^6.0.1",
+    "@hapi/joi": "^17.1.0",
+    "@hapi/vision": "^6.0.0",
+    "hapi-api-version": "^2.3.1",
+    "hapi-pino": "^6.5.0",
+    "hapi-swagger": "^12.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jest": "^23.6.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "faker": "^4.1.0",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "store.json"
+    ]
+  }
+}
